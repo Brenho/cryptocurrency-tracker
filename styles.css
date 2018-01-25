@@ -124,18 +124,28 @@ footer li {
         display: none;
     }
     .coin-info{
-        height: 200px;
+        height: 300px;
         flex-wrap: wrap;
         justify-content: center;
         border: none;
     }
     .coin-info .rank{
-        display: none;
+        z-index: 1;
     }
     .coin-info .name{
         flex-basis: 100%;
-        font-size: 2em;
+        font-size: 3.5em;
         padding: 2px;
+    }
+    .coin-info .cap{
+        font-size: 2em;
+
+    }
+    .coin-info .coinPrice{
+        font-size: 2em;
+    }
+    .coin-info .change{
+        font-size: 2em;
     }
     #btn{
         margin: 40px;

@@ -3,68 +3,63 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body{
+body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #4D5459;
 }
-
-.hero{
+.hero {
     background-color: #393D41;
     color: #fff;
     position: relative;
     justify-content: center;
     text-align: center;
-    height: 40vh;
+    height: 60vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+#hero-content {
     font-size: 2em;
 }
-
-#hero-content{
-    
+#hero-content h1, p{
+    padding: 15px;
 }
-
-section{
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 80px;
 }
-
-section h3.title{
-    text-transform: capitalize;
-    font: bold 32px "Open Sans", sans-serif;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-a{
+a {
     text-decoration: none;
     opacity: 0.75;
     color: #fff;
 }
-
-ul{
+ul {
     list-style: none;
 }
-
-button:focus {
-    outline:0;
+hr {
+    height:2px;
+    border:none;
+    color:#fff;
+    background-color:#4D5459;
+    width:10%;
+    text-align:center;
+    margin: 0 auto;
 }
-
-#key{
+button:focus {
+    outline: 0;
+}
+#key {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-
-#keyholder{
+#keyholder {
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
     margin: 10px;
 }
-
-.key{
+.key {
     display: flex;
     flex-basis: 25%;
     align-items: center;
@@ -75,49 +70,75 @@ button:focus {
     font-size: 20px;
 }
 
-.rank{
-    flex-basis: 5%;
-}
-
-#coinData{
+#coinData {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-
-.coin-info{
+.coin-info {
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
     margin: 10px;
     border: 1px solid #CCCDCE;
+    background-color: #393D41;
 }
 
-#moreCoins{
+.rank {
+    flex-basis: 5%;
+}
+
+.moreCoins{
+    padding-top: 10px;
+}
+#btn {
     padding: 15px;
     background-color: #4D5459;
     color: #fff;
-    border: 1px solid #448F83;
+    border: 2px solid #393D41;
     cursor: pointer;
+    width: 150px;
 }
-
-#moreCoins:hover{
-    background-color: #393D41; 
+#btn:hover {
+    background-color: #393D41;
 }
-
-footer{
+footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #393D41;
     color: #fff;
-    padding: 20px 0;
+    padding: 100px;
 }
-
-footer ul{
+footer ul {
     display: flex;
 }
-
-footer li{
+footer li {
     margin-left: 16px;
+}
+@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
+    section{
+        padding: 10px;
+    }
+    #key{
+        display: none;
+    }
+    .coin-info{
+        height: 200px;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: none;
+    }
+    .coin-info .rank{
+        display: none;
+    }
+    .coin-info .name{
+        flex-basis: 100%;
+        font-size: 2em;
+        padding: 2px;
+    }
+    #btn{
+        margin: 40px;
+    }
+    
 }

@@ -27,7 +27,7 @@ function updateCoins(data) {
             <div class="key rank">
                 ${rank}
             </div>
-            <div class="key">
+            <div class="key name">
                 ${coinName}
                 (${symbol})
             </div>
@@ -64,7 +64,7 @@ function updateCoins(data) {
 //};
 
 //Load more coins
-var btn = document.getElementById('moreCoins');
+var btn = document.getElementById('btn');
 btn.addEventListener('click', function () {
     //Get amount of coins currently displaying
     var total = document.getElementsByClassName("coin-info").length;

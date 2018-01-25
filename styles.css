@@ -131,6 +131,7 @@ footer li {
     }
     .coin-info .rank{
         z-index: 1;
+        font-size: 2em;
     }
     .coin-info .name{
         flex-basis: 100%;
@@ -149,6 +150,11 @@ footer li {
     }
     #btn{
         margin: 40px;
+        font-size: 2em;
+        width: 300px;
+    }
+    footer a{
+        font-size: 1.5em;
     }
     
 }

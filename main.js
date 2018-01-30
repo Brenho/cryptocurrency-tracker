@@ -16,8 +16,8 @@ function updateCoins(data) {
         var symbol = data[i].symbol;
         var marketCap = data[i].market_cap_usd;
         var price = data[i].price_usd;
+        var changeHr = data[i].percent_change_1h;
         var change = data[i].percent_change_24h;
-
         var formatted = formatter.format(marketCap);
         var formatPrice = formatter.format(price);
 
@@ -36,6 +36,9 @@ function updateCoins(data) {
             </div>
             <div class="key coinPrice">
                 ${formatPrice}
+            </div>
+            <div class="key changeHr">
+                ${changeHr}
             </div>
             <div class="key change">
                 ${change}
@@ -81,16 +84,19 @@ btn.addEventListener('click', function () {
 //Change color of amounts to denote positive or negative changes
 function changeColor() {
     var changes = document.getElementsByClassName('change');
+    var changeHr = document.getElementsByClassName('changeHr');
     var price = document.getElementsByClassName('coinPrice');
     var cap = document.getElementsByClassName('cap');
 
     for (var i = 0; i < changes.length; i++) {
         if (changes[i].innerText < 0) {
             changes[i].style.color = "#F4796B";
+            changeHr[i].style.color = "#F4796B";
             price[i].style.color = "#F4796B";
             cap[i].style.color = "#F4796B";
         } else {
             changes[i].style.color = "#448F83";
+            changeHr[i].style.color = "#448F83";
             price[i].style.color = "#448F83";
             cap[i].style.color = "#448F83";
         }

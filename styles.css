@@ -128,7 +128,7 @@ footer li {
         display: none;
     }
     .coin-info{
-        height: 300px;
+        height: 320px;
         flex-wrap: wrap;
         justify-content: center;
         border: none;
@@ -143,15 +143,23 @@ footer li {
         padding: 2px;
     }
     .coin-info .cap{
+        flex-basis: 100%;
         font-size: 2em;
 
     }
     .coin-info .coinPrice{
+        flex-basis: 20%;
         font-size: 2em;
     }
     .coin-info .change{
+        flex-basis: 20%;
         font-size: 2em;
     }
+    .coin-info .changeHr{
+        flex-basis: 20%;
+        font-size: 2em;
+    }
+    
     #btn{
         margin: 40px;
         font-size: 2em;

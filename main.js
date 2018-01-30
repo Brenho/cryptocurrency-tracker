@@ -1,5 +1,5 @@
 //Cryptocurrency API
-var url = "https://api.coinmarketcap.com/v1/ticker/?limit=10";
+var url = "https://api.coinmarketcap.com/v1/ticker/?limit=50";
 
 //Fetch coins data
 fetch(url)
@@ -69,7 +69,7 @@ btn.addEventListener('click', function () {
     //Get amount of coins currently displaying
     var total = document.getElementsByClassName("coin-info").length;
 
-    var url = "https://api.coinmarketcap.com/v1/ticker/?start=" + total + "&limit=10";
+    var url = "https://api.coinmarketcap.com/v1/ticker/?start=" + total + "&limit=50";
     fetch(url)
         .then(function (res) {
             return res.json()
@@ -97,7 +97,7 @@ function changeColor() {
     }
 
 };
-
+  
 //Format currency amounts
 var formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',

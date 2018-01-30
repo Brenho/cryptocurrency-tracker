@@ -57,7 +57,7 @@ button:focus {
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
-    margin: 10px;
+    margin: 5px;
 }
 .key {
     display: flex;
@@ -79,7 +79,7 @@ button:focus {
     display: flex;
     flex-basis: 100%;
     justify-content: space-between;
-    margin: 10px;
+    margin: 5px;
     border: 1px solid #CCCDCE;
     background-color: #393D41;
 }
@@ -90,17 +90,21 @@ button:focus {
 
 .moreCoins{
     padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-#btn {
+.btn {
     padding: 15px;
-    background-color: #4D5459;
+    background-color: #393D41;
     color: #fff;
     border: 2px solid #393D41;
     cursor: pointer;
     width: 150px;
+    margin: 5px;
 }
-#btn:hover {
-    background-color: #393D41;
+.btn:hover {
+    background-color: #4D5459;
 }
 footer {
     display: flex;

@@ -7,20 +7,79 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #4D5459;
 }
+a:hover {
+    cursor: pointer;
+}
 .hero {
     background-color: #393D41;
     color: #fff;
     position: relative;
     justify-content: center;
     text-align: center;
-    height: 60vh;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    height: 30vh;
+    /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);*/
 }
+
 #hero-content {
     font-size: 2em;
 }
-#hero-content h1, p{
+#hero-content h1,
+p {
     padding: 15px;
+}
+#control-icons {}
+#controls {
+    display: flex;
+}
+select {
+    height: 30px;
+    margin-top: 10px;
+    background: #393D41;
+    color: #fff;
+}
+#switch {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    top: 20px;
+    right: 20px;
+}
+.switch input {
+    display: none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4D5459;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #ccc;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
 }
 section {
     display: flex;
@@ -37,12 +96,12 @@ ul {
     list-style: none;
 }
 hr {
-    height:2px;
-    border:none;
-    color:#fff;
-    background-color:#4D5459;
-    width:10%;
-    text-align:center;
+    height: 2px;
+    border: none;
+    color: #fff;
+    background-color: #4D5459;
+    width: 10%;
+    text-align: center;
     margin: 0 auto;
 }
 button:focus {
@@ -58,6 +117,7 @@ button:focus {
     flex-basis: 100%;
     justify-content: space-between;
     margin: 5px;
+    border: 1px solid #CCCDCE;
 }
 .key {
     display: flex;
@@ -69,7 +129,6 @@ button:focus {
     color: #fff;
     font-size: 20px;
 }
-
 #coinData {
     display: flex;
     flex-direction: column;
@@ -83,12 +142,10 @@ button:focus {
     border: 1px solid #CCCDCE;
     background-color: #393D41;
 }
-
 .rank {
     flex-basis: 5%;
 }
-
-.moreCoins{
+.moreCoins {
     padding-top: 10px;
     display: flex;
     flex-direction: row;
@@ -120,53 +177,52 @@ footer ul {
 footer li {
     margin-left: 16px;
 }
-@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
-    section{
+
+
+@media screen and (min-device-width: 320px) and (max-device-width: 800px) {
+    section {
         padding: 10px;
     }
-    #key{
+    #key {
         display: none;
     }
-    .coin-info{
+    .coin-info {
         height: 320px;
         flex-wrap: wrap;
         justify-content: center;
         border: none;
     }
-    .coin-info .rank{
+    .coin-info .rank {
         z-index: 1;
         font-size: 2em;
     }
-    .coin-info .name{
+    .coin-info .name {
         flex-basis: 100%;
         font-size: 3.5em;
         padding: 2px;
     }
-    .coin-info .cap{
+    .coin-info .cap {
         flex-basis: 100%;
         font-size: 2em;
-
     }
-    .coin-info .coinPrice{
+    .coin-info .coinPrice {
         flex-basis: 20%;
         font-size: 2em;
     }
-    .coin-info .change{
+    .coin-info .change {
         flex-basis: 20%;
         font-size: 2em;
     }
-    .coin-info .changeHr{
+    .coin-info .changeHr {
         flex-basis: 20%;
         font-size: 2em;
     }
-    
-    #btn{
+    #btn {
         margin: 40px;
         font-size: 2em;
         width: 300px;
     }
-    footer a{
+    footer a {
         font-size: 1.5em;
     }
-    
 }
